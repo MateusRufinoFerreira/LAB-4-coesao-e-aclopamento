@@ -1,9 +1,11 @@
 package lab_4_coesao_e_aclopamento;
 
-class Circulo extends FigurasGeometricas {
+public class Circulo extends FigurasGeometricas {
     private double raio;
 
     public Circulo(double raio) {
+        if (raio <= 0)
+            throw new IllegalArgumentException("Raio deve ser positivo.");
         this.raio = raio;
     }
 
