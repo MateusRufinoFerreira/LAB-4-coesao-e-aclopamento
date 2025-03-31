@@ -12,23 +12,38 @@ public class BrincandoComAsFigurasGeometricas {
 		
 		FigurasGeometricas fig = new FigurasGeometricas(10, 5, 7, 25);
 		*/
-		 	FigurasGeometricas retangulo = new Retangulo(10, 5);
-	        FigurasGeometricas quadrado = new Quadrado(7);
-	        FigurasGeometricas circulo = new Circulo(7);
-	        FigurasGeometricas triangulo = new Triangulo(3, 25, 3, 4, 5);
+		try {
+			FigurasGeometricas retangulo = new Retangulo(10, 5);
+			System.out.println("Área do retângulo: " + retangulo.calcularArea());
+			System.out.println("Perímetro do retângulo: " + retangulo.calcularPerimetro());
+		} catch (IllegalArgumentException e) {
+			System.out.println("Erro no retângulo: " + e.getMessage());
+		}
 
-	        System.out.println("Área do retângulo: " + retangulo.calcularArea());
-	        System.out.println("Perímetro do retângulo: " + retangulo.calcularPerimetro());
+		try {
+			FigurasGeometricas quadrado = new Quadrado(7);
+			System.out.println("Área do quadrado: " + quadrado.calcularArea());
+			System.out.println("Perímetro do quadrado: " + quadrado.calcularPerimetro());
+		} catch (IllegalArgumentException e) {
+			System.out.println("Erro no quadrado: " + e.getMessage());
+		}
 
-	        System.out.println("Área do quadrado: " + quadrado.calcularArea());
-	        System.out.println("Perímetro do quadrado: " + quadrado.calcularPerimetro());
+		try {
+			FigurasGeometricas circulo = new Circulo(7);
+			System.out.println("Área do círculo: " + circulo.calcularArea());
+			System.out.println("Perímetro do círculo: " + circulo.calcularPerimetro());
+		} catch (IllegalArgumentException e) {
+			System.out.println("Erro no círculo: " + e.getMessage());
+		}
 
-	        System.out.println("Área do círculo: " + circulo.calcularArea());
-	        System.out.println("Perímetro do círculo: " + circulo.calcularPerimetro());
-
-	        System.out.println("Área do triângulo: " + triangulo.calcularArea());
-	        System.out.println("Perímetro do triângulo: " + triangulo.calcularPerimetro());
-	    }
+		try {
+			FigurasGeometricas triangulo = new Triangulo(3, 25, 3, 4, 5);
+			System.out.println("Área do triângulo: " + triangulo.calcularArea());
+			System.out.println("Perímetro do triângulo: " + triangulo.calcularPerimetro());
+		} catch (IllegalArgumentException e) {
+			System.out.println("Erro no triângulo: " + e.getMessage());
+		}
+	}
 		
 /*
 		
@@ -42,5 +57,6 @@ public class BrincandoComAsFigurasGeometricas {
 		inf = fig.toStringDaFigura(2);
 		System.out.println(inf);*/
 	}
+
 
 
